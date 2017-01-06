@@ -1,0 +1,30 @@
+{
+  "name": "Daefen",
+  "version": "1.0.0",
+  "description": "A library for encoding and decoding large numbers into a pronounceable, high density, string, that uses 3456 syllables as it's base.",
+  "main": "index.js",
+  "scripts": {
+    "test": "encode"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexvandesande/daefen.git"
+  },
+  "dependencies": {
+    "bignumber.js": "^2.1.4"
+  },
+  "keywords": [
+    "syllable",
+    "password",
+    "mnemonic",
+    "encoding",
+    "seed",
+    "phrase"
+  ],
+  "author": "Alex Van de Sande",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alexvandesande/beba-base/issues"
+  },
+  "homepage": "https://github.com/alexvandesande/beba-base#readme"
+}
