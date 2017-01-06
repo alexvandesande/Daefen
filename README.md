@@ -10,15 +10,26 @@ This is intended to build mnemonic seed phrases for private keys. This library d
 This has the bits equivalent of a 12 word seed phrase:
 *Icuzgak Raowah Kavnik Evmub Usalon*
 
-More examples:
+#### More examples:
+
 0xdc9974d8d61ebb673b1d132e0b767f4e38fba057 : "Dy Lokgym Panviz Ymyvoy Jycbiz Campue Gubcil Ogo"
+
 64244571162838560 : Joadyl Meczak Hib
+
 393417545048166200 : Zofwus Kubzoj Wyi
+
 510000000000000 : Afnik Paa Ydjej (Amount of squared meters on earth, great for a map naming scheme)
+
 1000000 : Daefen 
+
 3454 : Yzu
+
 3455 : Yzy
+
 3456 : Acab
+
 3457 : Acac
+
 1 : Ac
+
 0 : Ab
