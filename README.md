@@ -8,6 +8,7 @@ This is intended to build mnemonic seed phrases for private keys. This library d
 ### Examples
 
 This has the bits equivalent of a 12 word seed phrase (from a dictionary of 1000 words):
+<<<<<<< HEAD
 
 **Icuzgak Raowah Kavnik Evmub Usalon**
 
@@ -52,5 +53,4 @@ Also, while this library is not meant for making english phrases, it can inciden
 6,145,430,305,248 : **Juicy Kebab** 
 
 376,430,100,097,166,371 : **Winter has come** 
-
 
