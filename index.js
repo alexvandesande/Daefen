@@ -93,7 +93,8 @@ function toWords(numberAsString) {
 // Converts a valid phrase back into a string
 function fromWords(words) {
   let wordArray = words.toLowerCase()
-    .replace(/[bcdfghjklmnprstvwz][bcdfghjklmnprstvwz]|[a-z]{6}|[a-z]{4}/gi,function(r){ let n = Math.floor(r.length/2); return r.substr(0,n) + ' ' + r.substr(n,n)})
+    .replace(/[bcdfghjklmnprstvwz][bcdfghjklmnprstvwz]/gi,function(r){ let n = Math.floor(r.length/2); return r.substr(0,n) + ' ' + r.substr(n,n)})
+    .replace(/[a-z]{6}|[a-z]{4}/gi,function(r){ let n = Math.floor(r.length/2); return r.substr(0,n) + ' ' + r.substr(n,n)})
     .split(" ");
   let result = new BigNumber(0);
 

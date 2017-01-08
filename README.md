@@ -7,29 +7,50 @@ This is intended to build mnemonic seed phrases for private keys. This library d
 
 ### Examples
 
-This has the bits equivalent of a 12 word seed phrase:
-*Icuzgak Raowah Kavnik Evmub Usalon*
+This has the bits equivalent of a 12 word seed phrase (from a dictionary of 1000 words):
 
-#### More examples:
+**Icuzgak Raowah Kavnik Evmub Usalon**
 
-0xdc9974d8d61ebb673b1d132e0b767f4e38fba057 : "Dy Lokgym Panviz Ymyvoy Jycbiz Campue Gubcil Ogo"
+The library accepts numbers as strings, both in decimal and in hex format, meaning that it can convert any ethereum public or private key to and from  a phrase. They can be used for a paper wallet althought using Daefen as a deterministic phrase seed is probably more useful. You don't need to convert the  phrase into a number using this librayr, just use it as a seed source.
 
-64244571162838560 : Joadyl Meczak Hib
+0xdc9974d8d61ebb673b1d132e0b767f4e38fba057 : **Dy Lokgym Panviz Ymyvoy Jycbiz Campue Gubcil Ogo**
 
-393417545048166200 : Zofwus Kubzoj Wyi
+Both words below represent numbers with about 55 bits of entropy. Combined they make up 115 bits of entropy, into a short, but writeable seed. If you try hard enough you might even be able to memorize them (how many names of fictional places have you memorized?), but it's not really recommended. This library is just concerned in converting the numbers: you still need to generate your own randomness.
 
-510000000000000 : Afnik Paa Ydjej (Amount of squared meters on earth, great for a map naming scheme)
+64,244,571,162,838,560 : **Joadyl Meczak Hib**
+393,417,545,048,166,200 : **Zofwus Kubzoj Wyi**
 
-1000000 : Daefen 
+It might be very useful for naming a large amount of things into pronounceable names not tied to any language. For instance, earth has 510,000,000,000,000 squared meters. If you wanted to give a unique name for each one of them, the last one would be named: **Afnik Paa Ydjej**. This ideally could be combined with variable amounts of precision, so only **Afnik Paa** could describe an area about 11 square kilometer (a city) or you could add an extra syllable (**Afnik Paa Ydjej Bo**) to describe an area with a precision of less than 3 cm.
 
-3454 : Yzu
+There are about 8 billions internet connection devices on the planet. If you wanted everyone to have a unique name on this schema, then the last one would be called **Roozit Aci**. There is an estimate of 10 quintillion insects on earth, if you wanted to name each individual, the last one would be named **Edcah Ocudug Usalon**.
 
-3455 : Yzy
+The name of the library is the name given to a million: **Daefen** 
 
-3456 : Acab
+It works like a base as you can see here:
 
-3457 : Acac
+0 : Ab
 
 1 : Ac
 
-0 : Ab
+2 : Ad
+
+...
+
+3,454 : Yzu (This is a single syllable)
+
+3,455 : Yzy
+
+3,456 : Acab (Ac + Ab)
+
+3,457 : Acac (Ac + Ac)
+
+
+And so on.
+
+Also, while this library is not meant for making english phrases, it can incidentally make some:
+
+6,145,430,305,248 : **Juicy Kebab** 
+
+376,430,100,097,166,371 : **Winter has come** 
+
+
