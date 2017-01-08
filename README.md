@@ -7,29 +7,30 @@ This is intended to build mnemonic seed phrases for private keys. This library d
 
 ### Examples
 
-This has the bits equivalent of a 12 word seed phrase:
+This has the bits equivalent of a 12 word seed phrase (from a dictionary of 1000 words):
 *Icuzgak Raowah Kavnik Evmub Usalon*
 
-#### More examples:
-
+The library accepts numbers as strings, both in decimal and in hex format, meaning that it can convert any ethereum public or private key to and from  a phrase. They can be used for a paper wallet althought using Daefen as a deterministic phrase seed is probably more useful. You don't need to convert the  phrase into a number using this librayr, just use it as a seed source.
 0xdc9974d8d61ebb673b1d132e0b767f4e38fba057 : "Dy Lokgym Panviz Ymyvoy Jycbiz Campue Gubcil Ogo"
 
-64244571162838560 : Joadyl Meczak Hib
+Both words below represent numbers with about 55 bits of entropy. Combined they make up 115 bits of entropy, into a short, but writeable seed. If you try hard enough you might even be able to memorize them, but it's not really recommended. This library is just concerned in converting the numbers: you still need to generate your own randomness.
 
+64244571162838560 : Joadyl Meczak Hib
 393417545048166200 : Zofwus Kubzoj Wyi
 
-510000000000000 : Afnik Paa Ydjej (Amount of squared meters on earth, great for a map naming scheme)
+It might be very useful for naming a large amount of things into pronounceable names not tied to any language. For instance, earth has 510,000,000,000,000 squared meters. If you wanted to give a unique name for each one of them, the last one would be named: "Afnik Paa Ydjej". This ideally could be combined with variable amounts of precision, so "Afnik Paa" could describe an area about 11 square kilometer (a city) or you could add an extra syllable ("Afnik Paa Ydjej Bo") to describe an area with a precision of less than 3 cm. 
 
-1000000 : Daefen 
+The names comes from the name given to a million: Daefen 
 
-3454 : Yzu
-
-3455 : Yzy
-
-3456 : Acab
-
-3457 : Acac
-
-1 : Ac
+It works like a base as you can see here:
 
 0 : Ab
+1 : Ac
+2 : Ad
+...
+3454 : Yzu (This is a single syllable)
+3455 : Yzy
+3456 : Acab (Ac + Ab)
+3457 : Acac (Ac + Ac)
+
+And so on.
