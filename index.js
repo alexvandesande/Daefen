@@ -9,7 +9,7 @@ A library for encoding and decoding large numbers into a pronounceable, high den
 
 // Creates the syllable array
 var syllables = [];
-var consonants = 'bcdfghjklmnprstvwz'; // consonants except hard to speak ones
+var consonants = 'bcdfghjklmnprstvwz'; // consonants that are unambiguous and easy to pronounce
 var vowels = 'aeiouy'; // vowels
 
 // Vowel + Consonant
