@@ -2,14 +2,14 @@
 Daefen
 ------
 
-A library for encoding and decoding large numbers into a pronounceable, high density, string, that uses 3456 syllables as it's base.
+A library for encoding/decoding large numbers into/from a pronounceable high-density string constructed from a base of 3456 syllables.
 
 
 */
 
 // Creates the syllable array
 var syllables = [];
-var consonants = 'bcdfghjklmnprstvwz'; // consonants except hard to speak ones
+var consonants = 'bcdfghjklmnprstvwz'; // consonants that are unambiguous easy to pronounce
 var vowels = 'aeiouy'; // vowels
 
 // Vowel + Consonant
@@ -53,7 +53,7 @@ for (a = 0; a < vowels.length; a++) {
   } 
 }
 
-// Quick function that converst a big Number object into an array of numbers in any base
+// Quick function that converts a big Number object into an array of numbers for any chosen base
 function fromBase10(bigNum, base) {
   var result = [];
   if (bigNum == 0) return [0];
