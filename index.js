@@ -6,6 +6,8 @@ A library for encoding/decoding large numbers into/from a pronounceable high-den
 */
 
 // Creates the syllable array
+// Alternatively you can simply load the syllable arrays from syllables.js
+
 var syllables = [];
 var consonants = "bcdfghjklmnprstvwz"; // consonants that are unambiguous and easy to pronounce
 var vowels = "aeiouy"; // vowels
@@ -121,6 +123,7 @@ function fromWords(words) {
   return result;
 }
 
+// Be careful with numbers much larger than this in javascript
 var random = Math.floor(Math.random() * Math.pow(2, 55));
 
 toWords(random);
